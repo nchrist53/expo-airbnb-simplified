@@ -1,5 +1,6 @@
 import { FlatList, Image, Text, View } from "react-native";
-import { styles } from "../constants/theme.js";
+import { SafeAreaView } from "react-native-safe-area-context";
+import { styles } from "../../constants/theme.js";
 
 export default function HomeScreen() {
     let logements = [];
@@ -30,8 +31,8 @@ export default function HomeScreen() {
     });
 
     return (
-        <View style={styles.container}>
-            <Image style={styles.logo} source={require("../assets/images/logo.png")}/>
+        <SafeAreaView style={styles.container}>
+            <Image style={styles.logo} source={require("../../assets/images/logo.png")}/>
             <FlatList style={styles.logements} 
                       data={logements} 
                       keyExtractor={(item) => item.id} 
@@ -46,6 +47,6 @@ export default function HomeScreen() {
                     </View>
                 </View>
             )} />
-        </View>
+        </SafeAreaView>
     );
 }
