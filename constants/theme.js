@@ -8,6 +8,15 @@ export const styles = StyleSheet.create({
         justifyContent: "top",
     },
 
+    containerPadding: {
+        paddingLeft: 20,
+        paddingRight: 20,
+    },
+
+    containerTop: {
+        paddingTop: 20,
+    },
+
     logo: {
         width: 200,
         height: 50,
@@ -16,8 +25,15 @@ export const styles = StyleSheet.create({
         marginBottom: 20,
     },
 
+    profile: {
+        profileImage: {
+            borderRadius: "50%",
+            borderWidth: 3,
+            borderColor: "#ff5a5f",
+        },
+    },
+
     logements: {
-        marginBottom: 50,
         marginLeft: 10,
         marginRight: 10,
         width: "100%",        
@@ -35,28 +51,42 @@ export const styles = StyleSheet.create({
             justifyContent: "flex-start",
 
             imageContainer: {
-                width: 50,
+                width: "45%",
                 marginRight: 10,
                 image: {
-                    width: 50,
-                    height: 50,
+                    width: "100%",
+                    height: 200,
                     marginRight: 10,
                     borderRadius: 5,
                 },
             },
 
-            title: {
-                fontSize: 20,
-                fontWeight: "bold",
-                marginBottom: 5,
-                textAlign: "left",
-                color: "#ff5a5f",
-            },
+            logementInfo: {
+                height: 200,
+                justifyContent: "flex-start",
+                alignItems: "flex-start",
+                flex: 1,
+                flexWrap: "wrap",
+                title: {
+                    fontSize: 20,
+                    fontWeight: "bold",
+                    marginBottom: 5,
+                    textAlign: "left",
+                    color: "#ff5a5f",
+                },
 
-            prix: {
-                fontSize: 20,
-                color: "#ff8c8f",
-                textAlign: "left",
+                prix: {
+                    fontSize: 18,
+                    color: "#ff9c9f",
+                    textAlign: "left",
+                },
+
+                description: {
+                    fontSize: 14,
+                    color: "#ff6b6f",
+                    textAlign: "left",
+                    marginTop: 10,
+                },
             },
         },
     },
