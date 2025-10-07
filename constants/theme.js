@@ -27,7 +27,7 @@ export const styles = StyleSheet.create({
 
     profile: {
         profileImage: {
-            borderRadius: "50%",
+            borderRadius: 99999999,
             borderWidth: 3,
             borderColor: "#ff5a5f",
         },
@@ -79,6 +79,20 @@ export const styles = StyleSheet.create({
                     fontSize: 18,
                     color: "#ff9c9f",
                     textAlign: "left",
+                },
+
+                city: {
+                    fontSize: 14,
+                    color: "#ff7b7f",
+                    textAlign: "left",
+                    marginLeft: 3,
+                },
+
+                rating: {
+                    fontSize: 14,
+                    color: "#ff7b7f",
+                    textAlign: "left",
+                    marginTop: 5,
                 },
 
                 description: {
