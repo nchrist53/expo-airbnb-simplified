@@ -27,7 +27,6 @@ export default function MessagesScreen() {
         }
     }, []);
 
-    // Filtrer les messages pour n'afficher qu'un seul message (le dernier) par postId
     const filteredMessages = Object.values(
         messages.reduce((acc, message) => {
             acc[message.postId] = message;
