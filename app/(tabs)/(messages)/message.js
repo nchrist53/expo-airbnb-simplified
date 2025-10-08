@@ -22,7 +22,7 @@ export default function MessageDetail() {
     if (!messages || messages.length === 0) {
         return (
             <SafeAreaView style={[styles.container, styles.containerPadding]}>
-                <Text>No messages found...</Text>
+                <Text>Aucun messages...</Text>
             </SafeAreaView>
         );
     }
