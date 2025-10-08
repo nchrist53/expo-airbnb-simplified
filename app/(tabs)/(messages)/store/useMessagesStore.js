@@ -16,9 +16,6 @@ export const useMessagesStore = create((set, get) => {
         addMessage: (message) => set((state) => ({
             messages: [...state.messages, message]
         })),
-        removeMessage: (id) => set((state) => ({
-            messages: state.messages.filter(message => message.id !== id),
-        })),
         getMessagesByPostId: (postId) => {
             const messages = get().messages || [];
             return messages.filter(message => Number(message.postId) === Number(postId));
