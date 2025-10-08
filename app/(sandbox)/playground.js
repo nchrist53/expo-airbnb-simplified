@@ -11,6 +11,8 @@ export default function Playground() {
         <Button title="Exo 3 - useContext" onPress={() => router.push('/(sandbox)/exo-useContext')} />
         <Button title="Exo 4 - Zustand" onPress={() => router.push('/(sandbox)/exo-zustand')} />
         <Button title="Exo 5 - Formulaire" onPress={() => router.push('/(sandbox)/exo-formulaire')} />
+        <Button title="Exo 6 - Camera" onPress={() => router.push('/(sandbox)/exo-camera')} />
+        <Button title="Exo 7 - Geolocalisation" onPress={() => router.push('/(sandbox)/exo-geolocalisation')} />
     </View>
   )
 }

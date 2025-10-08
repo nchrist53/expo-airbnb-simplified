@@ -1,4 +1,4 @@
-import { Ionicons } from "@expo/vector-icons";
+import { FontAwesome, Ionicons } from "@expo/vector-icons";
 import { Drawer } from "expo-router/drawer";
 
 export default function DrawerLayout() {
@@ -22,6 +22,12 @@ export default function DrawerLayout() {
         options={{
           title: 'Paramètres',
           drawerIcon: ({ color, size }) => <Ionicons name="settings" color={color} size={size} />
+        }} />
+      <Drawer.Screen 
+        name="viewFavorites" 
+        options={{
+          title: 'Favoris (W.I.P.)',
+          drawerIcon: ({ color, size }) => <FontAwesome name="heart" color={color} size={size} />
         }} />
     </Drawer>
   );

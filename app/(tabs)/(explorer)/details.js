@@ -23,7 +23,7 @@ export default function ExplorerDetail() {
             <Text style={styles.logements.logement.logementInfo.title}>{title}</Text>
             <Text style={styles.logements.logement.logementInfo.prix}>{prix} € - {type}</Text>
             <Text style={styles.logements.logement.logementInfo.rating}>
-                {rating}/5 {renderStars(rating)} ({reviews} reviews)
+                {rating}/5 {renderStars(rating)} ({reviews} avis)
             </Text>
             <Text style={styles.logements.logement.logementInfo.description}>{description}</Text>
         </View>
@@ -32,21 +32,20 @@ export default function ExplorerDetail() {
   );
 
   function renderStars(rating) {
-        const fullStar = "★";
-        const halfStar = "★";
-        const emptyStar = "☆";
-        const stars = [];
+      const fullStar = "★";
+      const emptyStar = "☆";
+      const stars = [];
 
-        for (let i = 1; i <= 5; i++) {
-            if (i <= Math.floor(rating)) {
-                stars.push(fullStar);
-            } else if (i === Math.ceil(rating) && rating % 1 !== 0) {
-                stars.push(halfStar);
-            } else {
-                stars.push(emptyStar);
-            }
-        }
+      for (let i = 1; i <= 5; i++) {
+          if (i <= Math.floor(rating)) {
+              stars.push(fullStar);
+          } else if (i === Math.ceil(rating) && rating % 1 >= 0.5) {
+              stars.push(fullStar);
+          } else {
+              stars.push(emptyStar);
+          }
+      }
 
-        return stars.join("");
+      return stars.join("");
   }
 }

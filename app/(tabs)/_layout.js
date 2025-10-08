@@ -1,4 +1,4 @@
-import { Ionicons } from '@expo/vector-icons';
+import { Ionicons, MaterialIcons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
 
 export default function TabLayout() {
@@ -17,6 +17,13 @@ export default function TabLayout() {
         options={{
           title: 'Accueil',
           tabBarIcon: ({ color, size }) => <Ionicons name="home" color={color} size={size} />,
+        }}
+      />
+      <Tabs.Screen
+        name="(messages)"
+        options={{
+          title: 'Messages',
+          tabBarIcon: ({ color, size }) => <MaterialIcons name="message" color={color} size={size} />,
         }}
       />
       <Tabs.Screen
